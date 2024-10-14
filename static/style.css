@@ -1,67 +1,88 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #EEEEEE; /* Light background color */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #201E43; /* Dark text color */
 }
 
 .container {
-    background-color: white;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    background-color: #fff;
+    padding: 50px 70px; /* Increased padding for better spacing */
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2); /* Larger shadow */
+    border-radius: 15px;
     text-align: center;
-    max-width: 500px;
-    width: 90%; /* Added to make it responsive */
+    max-width: 900px; /* Increased width */
+    min-height: 300px;
+    width: 100%;
+    margin: 0 20px;
+    transition: box-shadow 0.3s ease;
+    border-top: 10px solid #508C9B; /* Accent color for border */
+}
+
+.container:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25); /* Stronger hover effect */
 }
 
 h1 {
-    font-size: 2.2em;
+    font-size: 2.8em;
     margin-bottom: 20px;
-    color: #333;
+    color: #201E43; /* Heading color */
+    letter-spacing: 1.5px;
+    font-weight: 600;
 }
 
 /* Form Styles */
 label {
-    font-weight: 500;
-    margin-bottom: 10px;
+    font-weight: 600; /* Bold font for better visibility */
+    margin-bottom: 15px;
     display: block;
-    color: #555;
+    color: #493628; /* Text color */
+    font-size: 1.5em; /* Increased font size */
 }
 
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-size: 1em;
+
+input[type="text"] {
+    width: 100%; /* Ensures the input takes full width */
+    padding: 20px; /* Increased padding for better spacing */
+    font-size: 1.5em; /* Increased font size */
+    border: 2px solid #D6C0B3; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    height: 60px; /* Explicit height for a taller input */
+    margin-bottom: 30px; /* Spacing below the input */
+    background-color: #EEEEEE; /* Background color */
+    transition: border-color 0.3s ease; /* Smooth border transition */
 }
 
-select:focus {
-    outline: none;
-    border-color: #007BFF; /* Focus border color */
+input[type="text"]:focus {
+    outline: none; /* Remove outline on focus */
+    border-color: #508C9B; /* Change border color on focus */
+    background-color: #fff; /* Change background on focus */
 }
+
+
 
 /* Button Styling */
 button {
-    background-color: #007BFF;
+    background-color: #508C9B;
     color: white;
-    padding: 12px 25px;
+    padding: 16px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 1em;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #134B70; /* Darker on hover */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 button:focus {
@@ -69,16 +90,17 @@ button:focus {
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .container {
-        padding: 20px;
+        padding: 25px;
+        max-width: 95%;
     }
 
     h1 {
-        font-size: 1.8em;
+        font-size: 2.4em;
     }
 
     button {
-        padding: 10px 20px;
+        padding: 12px 30px;
     }
 }

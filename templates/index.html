@@ -11,12 +11,13 @@
     <div class="container">
         <h1>Movie Recommendation Engine</h1>
         <form action="/recommend" method="POST">
-            <label for="movie_title">Select Movie Title:</label>
-            <select id="movie_title" name="movie_title" required>
+            <label for="movie_title">Enter or Select Movie Title:</label>
+            <input list="movies" id="movie_title" name="movie_title" placeholder="Type or select a movie" required>
+            <datalist id="movies">
                 {% for movie in movies %}
-                    <option value="{{ movie }}">{{ movie }}</option>
+                    <option value="{{ movie }}">
                 {% endfor %}
-            </select>
+            </datalist>
             <button type="submit">Get Recommendations</button>
         </form>
     </div>
