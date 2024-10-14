@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
 app = Flask(__name__)
 
@@ -49,19 +51,24 @@ model.fit(X_train, y_train)
 # Recommendation function based on a selected movie
 def recommend_movies(movie_title):
     movie = movies[movies['title'].str.lower() == movie_title.lower()]
-    
+
     if movie.empty:
         return []
-    
-    # Extract the movie's features
-    movie_features = X[movies['title'].str.lower() == movie_title.lower()]
 
-    # Predict similar movies based on movie features
-    predictions = model.predict(X_test)
-    
-    # Find 5 most similar movies (just as placeholders, improving it would require different steps)
-    movie_indices = predictions.argsort()[-5:][::-1]  # Get the indices of the top 5 recommendations
-    recommended_movies = movies.iloc[movie_indices]['title'].tolist()
+    # Get the index of the selected movie
+    movie_index = movie.index[0]
+
+    # Get the combined features for the selected movie
+    movie_features = X.iloc[movie_index].values.reshape(1, -1)
+
+    # Calculate the cosine similarity between the selected movie and all other movies
+    similarity = cosine_similarity(movie_features, X)
+
+    # Get the indices of the most similar movies (excluding the selected movie)
+    similar_indices = np.argsort(similarity[0])[-6:-1]  # Get top 5 similar movies (excluding the movie itself)
+
+    # Get the titles of the recommended movies
+    recommended_movies = movies.iloc[similar_indices]['title'].tolist()
 
     return recommended_movies
 
