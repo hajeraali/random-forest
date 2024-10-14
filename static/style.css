@@ -9,6 +9,11 @@ body {
     align-items: center;
     height: 100vh;
     color: #201E43; /* Dark text color */
+    background-color: #E4E0E1; /* Fallback color */
+    background-image: url('bg.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire page */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
 }
 
 .container {
