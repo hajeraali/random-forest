@@ -1,29 +1,36 @@
 /* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #EEEEEE; /* Light background color */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #ece4ff; /* Dark text color */
+    background-color: #E4E0E1; /* Fallback color */
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bg.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire page */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
 }
 
 .container {
-    background-color: white;
+    background-color: #000000d7;
     padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-color: rgb(153, 110, 0);
+    border-style: solid;
+    border-radius: 15px;
     text-align: center;
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
 }
 
 h1 {
     font-size: 2.2em;
     margin-bottom: 20px;
-    color: #333;
+    color: #fff4f4;
 }
 
 /* Movie List Styling */
@@ -35,32 +42,37 @@ ul {
 
 li {
     font-size: 1.2em;
-    background-color: #f0f0f5;
+    background-color: #383838;
+    text-align: left;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    color: #333;
+    color: #ffffff;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* Button Styling */
 a {
-    text-decoration: none;
+    text-decoration: none ;
+    font-size: large;
     color: white;
-    background-color: #007BFF;
+    background-color: #c80000;
     padding: 12px 25px;
+    border-color:#c80000 ;
+    border-style: solid;
     border-radius: 5px;
     display: inline-block;
+    margin: 60 px;
     transition: background-color 0.3s;
 }
 
 a:hover {
-    background-color: #0056b3;
+    background-color: #b50000;
 }
 
 a:focus {
     outline: none;
-    background-color: #0056b3;
+    background-color: #9c0000;
 }
 
 /* Responsive Design */

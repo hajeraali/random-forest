@@ -8,26 +8,26 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #201E43; /* Dark text color */
+    color: #ece4ff; /* Dark text color */
     background-color: #E4E0E1; /* Fallback color */
-    background-image: url('bg.jpg'); /* Path to your image */
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bg.jpg'); /* Path to your image */
     background-size: cover; /* Cover the entire page */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-position: center; /* Center the image */
 }
 
 .container {
-    background-color: #fff;
+    background-color: #000000d7;
     padding: 50px 70px; /* Increased padding for better spacing */
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2); /* Larger shadow */
+    border-color: rgb(153, 110, 0);
+    border-style: solid;
     border-radius: 15px;
     text-align: center;
-    max-width: 900px; /* Increased width */
-    min-height: 300px;
+    max-width: 800px; /* Increased width */
+    min-height: 500px;
     width: 100%;
     margin: 0 20px;
     transition: box-shadow 0.3s ease;
-    border-top: 10px solid #508C9B; /* Accent color for border */
 }
 
 .container:hover {
@@ -36,8 +36,8 @@ body {
 
 h1 {
     font-size: 2.8em;
-    margin-bottom: 20px;
-    color: #201E43; /* Heading color */
+    margin-bottom: 40px;
+    color: #dbd9ff; /* Heading color */
     letter-spacing: 1.5px;
     font-weight: 600;
 }
@@ -45,55 +45,47 @@ h1 {
 /* Form Styles */
 label {
     font-weight: 600; /* Bold font for better visibility */
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     display: block;
-    color: #493628; /* Text color */
+    color: #ffdbc2; /* Text color */
     font-size: 1.5em; /* Increased font size */
 }
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
 
-
-input[type="text"] {
-    width: 100%; /* Ensures the input takes full width */
-    padding: 20px; /* Increased padding for better spacing */
-    font-size: 1.5em; /* Increased font size */
-    border: 2px solid #D6C0B3; /* Border color */
-    border-radius: 8px; /* Rounded corners */
-    height: 60px; /* Explicit height for a taller input */
-    margin-bottom: 30px; /* Spacing below the input */
-    background-color: #EEEEEE; /* Background color */
-    transition: border-color 0.3s ease; /* Smooth border transition */
-}
-
-input[type="text"]:focus {
-    outline: none; /* Remove outline on focus */
-    border-color: #508C9B; /* Change border color on focus */
-    background-color: #fff; /* Change background on focus */
-}
-
-
-
-/* Button Styling */
 button {
-    background-color: #508C9B;
+    font-size: large;
     color: white;
-    padding: 16px 25px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9em;
-    font-weight: 500;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #c80000;
+    padding: 12px 25px;
+    border-color:#c80000 ;
+    border-style: solid;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 60 px;
+    transition: background-color 0.3s;
 }
-
 button:hover {
-    background-color: #134B70; /* Darker on hover */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    background-color: #b50000;
 }
 
 button:focus {
     outline: none;
+    background-color: #9c0000;
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
